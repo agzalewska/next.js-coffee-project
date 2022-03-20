@@ -4,6 +4,9 @@ import styles from '../styles/Home.module.css'
 import Banner from '../components/banner';
 
 export default function Home() {
+  const handleOnBannerBtnClick = () => {
+    console.log('button');
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -13,8 +16,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Coffee Enthusiast</h1>
-        <Banner />
+        <Banner
+          buttonText={'View stores nearby'}
+          handleOnClick={handleOnBannerBtnClick}
+        />
       </main>
 
       <footer className={styles.footer}>
